@@ -1,0 +1,33 @@
+# secrets
+.env
+*.pem
+*.jks
+*.keystore
+google-services.json
+local.properties
+firebase-service-account*.json
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# android
+android/.gradle/
+android/build/
+android/app/build/
+*.apk
+*.aab
+.idea/
+
+# node / web
+node_modules/
+
+# ml
+ml/models/*.joblib
+ml/data/*.csv
+
+# os
+.DS_Store

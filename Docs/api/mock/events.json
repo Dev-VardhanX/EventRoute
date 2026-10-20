@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "id": "11111111-1111-1111-1111-111111111111",
+      "title": "HackX 1.0 Hackathon (DEMO)",
+      "organizer_name": "Tech Club",
+      "college": { "id": "c1", "name": "RKGIT Ghaziabad" },
+      "category": "hackathon",
+      "banner_url": "",
+      "start_at": "2026-11-15T03:30:00Z",
+      "check_in_at": "2026-11-15T03:00:00Z",
+      "registration_deadline": "2026-11-12T18:29:00Z",
+      "timezone": "Asia/Kolkata",
+      "venue_name": "SGU Campus",
+      "venue_lat": 28.6692,
+      "venue_lng": 77.4538,
+      "participation_type": "team",
+      "team_min": 2,
+      "team_max": 4,
+      "seat_limit": 100,
+      "seats_left": 37,
+      "fee_amount": 0,
+      "status": "published",
+      "distance_km": 12.4,
+      "is_demo": true
+    }
+  ],
+  "total": 1,
+  "page": 1,
+  "page_size": 20
+}

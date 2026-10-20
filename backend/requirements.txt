@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+alembic
+psycopg2-binary
+pydantic-settings
+python-jose[cryptography]
+passlib[bcrypt]
+httpx
+apscheduler
+firebase-admin
+scikit-learn
+joblib
+pytest
