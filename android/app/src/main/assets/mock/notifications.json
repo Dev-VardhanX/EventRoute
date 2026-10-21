@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "id": "notif-1",
+      "type": "leave_soon",
+      "title": "Leave Soon Alert",
+      "body": "Leave in 15 minutes for HackX 2024 to arrive on time with The Bug Hunters.",
+      "created_at": "2026-10-24T02:30:00Z",
+      "is_read": false
+    },
+    {
+      "id": "notif-2",
+      "type": "team_member_joined",
+      "title": "Teammate Joined",
+      "body": "Sarah Smith joined your team The Bug Hunters.",
+      "created_at": "2026-10-23T14:30:00Z",
+      "is_read": true
+    },
+    {
+      "id": "notif-3",
+      "type": "traffic_delay",
+      "title": "Traffic Delay Re-route",
+      "body": "Pink Line delayed 5 mins. Route plan recalculated automatically.",
+      "created_at": "2026-10-24T01:30:00Z",
+      "is_read": false
+    }
+  ],
+  "total": 3,
+  "page": 1,
+  "page_size": 20
+}

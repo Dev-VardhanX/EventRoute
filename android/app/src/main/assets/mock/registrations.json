@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "id": "reg-001",
+      "event_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "u-john",
+      "team_id": "team-0001",
+      "status": "registered",
+      "ticket_token": "evrt.11111111-1111-1111-1111-111111111111.u-john.7e8b2a",
+      "event": {
+        "id": "11111111-1111-1111-1111-111111111111",
+        "title": "HackX 2024",
+        "organizer_name": "Tech Club IITD",
+        "college": {
+          "id": "c1",
+          "name": "IIT Delhi",
+          "city": "Hauz Khas, New Delhi",
+          "lat": 28.5459,
+          "lng": 77.1926
+        },
+        "category": "Hackathons",
+        "tags": ["AI", "Web3", "Hardware"],
+        "banner_url": "",
+        "mode": "offline",
+        "start_at": "2026-10-24T04:30:00Z",
+        "check_in_at": "2026-10-24T03:30:00Z",
+        "registration_deadline": "2026-10-23T18:30:00Z",
+        "timezone": "Asia/Kolkata",
+        "venue_name": "Bharti Building, IIT Delhi",
+        "venue_lat": 28.5459,
+        "venue_lng": 77.1926,
+        "participation_type": "team",
+        "team_min": 2,
+        "team_max": 4,
+        "seat_limit": 100,
+        "seats_left": 37,
+        "fee_amount": 0.0,
+        "status": "published",
+        "distance_km": 12.4,
+        "travel_estimate_minutes": 45,
+        "is_demo": true
+      }
+    },
+    {
+      "id": "reg-002",
+      "event_id": "33333333-3333-3333-3333-333333333333",
+      "user_id": "u-john",
+      "team_id": null,
+      "status": "registered",
+      "ticket_token": "evrt.33333333-3333-3333-3333-333333333333.u-john.1c9d4f",
+      "event": {
+        "id": "33333333-3333-3333-3333-333333333333",
+        "title": "Laughter Hub Open Mic",
+        "organizer_name": "Laughter Hub",
+        "college": {
+          "id": "c3",
+          "name": "NSUT, Dwarka",
+          "city": "Dwarka, New Delhi",
+          "lat": 28.6094,
+          "lng": 77.0368
+        },
+        "category": "Fests",
+        "tags": ["Standup", "Poetry"],
+        "banner_url": "",
+        "mode": "offline",
+        "start_at": "2026-11-02T12:30:00Z",
+        "check_in_at": "2026-11-02T12:00:00Z",
+        "registration_deadline": "2026-11-01T18:30:00Z",
+        "timezone": "Asia/Kolkata",
+        "venue_name": "Student Activity Center, NSUT",
+        "venue_lat": 28.6094,
+        "venue_lng": 77.0368,
+        "participation_type": "solo",
+        "team_min": 1,
+        "team_max": 1,
+        "seat_limit": 40,
+        "seats_left": 12,
+        "fee_amount": 0.0,
+        "status": "published",
+        "distance_km": 4.1,
+        "travel_estimate_minutes": 15,
+        "is_demo": true
+      }
+    }
+  ],
+  "total": 2,
+  "page": 1,
+  "page_size": 20
+}

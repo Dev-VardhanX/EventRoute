@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.EventRoute" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.EventRoute.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#EFF3F9</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.EventRoute</item>
+    </style>
+</resources>
