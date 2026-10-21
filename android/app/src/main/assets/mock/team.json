@@ -1,0 +1,60 @@
+{
+  "id": "team-0001",
+  "event_id": "11111111-1111-1111-1111-111111111111",
+  "name": "The Bug Hunters",
+  "leader_id": "u-john",
+  "invite_code": "HACK-291X",
+  "status": "confirmed",
+  "planned_arrival_at": "2026-10-24T04:00:00Z",
+  "plan_version": 2,
+  "members": [
+    {
+      "user_id": "u-john",
+      "name": "John Doe",
+      "college_name": "NSUT • CS Student",
+      "is_leader": true,
+      "start_lat": 28.6094,
+      "start_lng": 77.0368,
+      "start_address": "NSUT Campus, Dwarka",
+      "travel_pref": "transit",
+      "planned_leave_by": "08:45 AM",
+      "planned_arrival_at": "09:30 AM",
+      "journey_status": "READY",
+      "live_lat": 28.6094,
+      "live_lng": 77.0368,
+      "live_eta_at": "09:30 AM"
+    },
+    {
+      "user_id": "u-sarah",
+      "name": "Sarah Smith",
+      "college_name": "NSUT • ECE Student",
+      "is_leader": false,
+      "start_lat": 28.7501,
+      "start_lng": 77.1177,
+      "start_address": "DTU Rohini",
+      "travel_pref": "transit",
+      "planned_leave_by": "08:28 AM",
+      "planned_arrival_at": "09:30 AM",
+      "journey_status": "READY",
+      "live_lat": 28.6492,
+      "live_lng": 77.1226,
+      "live_eta_at": "09:32 AM"
+    },
+    {
+      "user_id": "u-alex",
+      "name": "Alex Johnson",
+      "college_name": "IIIT Delhi • IT Student",
+      "is_leader": false,
+      "start_lat": 28.5457,
+      "start_lng": 77.2732,
+      "start_address": "Okhla, New Delhi",
+      "travel_pref": "transit",
+      "planned_leave_by": "09:00 AM",
+      "planned_arrival_at": "09:30 AM",
+      "journey_status": "LATE",
+      "live_lat": 28.5520,
+      "live_lng": 77.2500,
+      "live_eta_at": "09:42 AM"
+    }
+  ]
+}

@@ -31,3 +31,7 @@ ml/data/*.csv
 
 # os
 .DS_Store
+
+AGENT_NOTES.md
+Gemini.md
+local.defaults.properties

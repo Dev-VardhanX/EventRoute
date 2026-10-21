@@ -1,0 +1,14 @@
+{
+  "id": "u-john",
+  "name": "John Doe",
+  "email": "john.doe@nsut.ac.in",
+  "role": "student",
+  "college_id": "c3",
+  "college_name": "NSUT, Dwarka",
+  "interests": ["Hackathons", "Robotics", "Web3"],
+  "home_lat": 28.6094,
+  "home_lng": 77.0368,
+  "home_label": "NSUT Campus, Dwarka",
+  "default_start": "college",
+  "is_email_verified": true
+}

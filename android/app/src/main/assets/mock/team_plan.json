@@ -1,0 +1,89 @@
+{
+  "team_id": "team-0001",
+  "target_arrival_at": "09:30 AM",
+  "arrival_spread_minutes": 12,
+  "is_at_risk": false,
+  "at_risk_reason": null,
+  "members": [
+    {
+      "user_id": "u-john",
+      "name": "John Doe",
+      "college_name": "NSUT • CS Student",
+      "is_leader": true,
+      "start_lat": 28.6094,
+      "start_lng": 77.0368,
+      "start_address": "NSUT Campus, Dwarka",
+      "travel_pref": "transit",
+      "planned_leave_by": "08:45 AM",
+      "planned_arrival_at": "09:30 AM",
+      "journey_status": "READY",
+      "live_lat": 28.6094,
+      "live_lng": 77.0368,
+      "live_eta_at": "09:30 AM"
+    },
+    {
+      "user_id": "u-sarah",
+      "name": "Sarah Smith",
+      "college_name": "NSUT • ECE Student",
+      "is_leader": false,
+      "start_lat": 28.7501,
+      "start_lng": 77.1177,
+      "start_address": "DTU Rohini",
+      "travel_pref": "transit",
+      "planned_leave_by": "08:28 AM",
+      "planned_arrival_at": "09:30 AM",
+      "journey_status": "READY",
+      "live_lat": 28.6492,
+      "live_lng": 77.1226,
+      "live_eta_at": "09:32 AM"
+    },
+    {
+      "user_id": "u-alex",
+      "name": "Alex Johnson",
+      "college_name": "IIIT Delhi • IT Student",
+      "is_leader": false,
+      "start_lat": 28.5457,
+      "start_lng": 77.2732,
+      "start_address": "Okhla, New Delhi",
+      "travel_pref": "transit",
+      "planned_leave_by": "09:00 AM",
+      "planned_arrival_at": "09:30 AM",
+      "journey_status": "LATE",
+      "live_lat": 28.5520,
+      "live_lng": 77.2500,
+      "live_eta_at": "09:42 AM"
+    }
+  ],
+  "travel_together_suggestion": "John and Sarah meet at Rajouri Garden Metro at 08:55 AM for Pink Line transfer",
+  "suggestions": [
+    {
+      "id": "sug-1",
+      "type": "metro_transfer",
+      "summary": "Join on Pink Line at Rajouri Garden (08:55 AM)",
+      "member_ids": ["u-john", "u-sarah"],
+      "meet_point": {
+        "label": "Rajouri Garden Metro",
+        "lat": 28.6492,
+        "lng": 77.1226
+      },
+      "meet_at": "08:55 AM",
+      "extra_minutes": 0,
+      "status": "pending"
+    },
+    {
+      "id": "sug-2",
+      "type": "cab_split",
+      "summary": "Cab split from Hauz Khas Metro to IIT Delhi Gate 1",
+      "member_ids": ["u-john", "u-alex"],
+      "meet_point": {
+        "label": "Hauz Khas Metro Station Gate 2",
+        "lat": 28.5430,
+        "lng": 77.2065
+      },
+      "meet_at": "09:12 AM",
+      "extra_minutes": 0,
+      "status": "pending"
+    }
+  ],
+  "plan_version": 1
+}
