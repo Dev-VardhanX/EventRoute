@@ -2,7 +2,18 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from app.api import admin, auth, colleges, events, health, me, uploads
+from app.api import (
+    admin,
+    auth,
+    colleges,
+    events,
+    health,
+    me,
+    organizer,
+    registrations,
+    teams,
+    uploads,
+)
 from app.core.config import get_settings
 from app.core.errors import register_error_handlers
 from app.services.storage import get_storage_provider
@@ -45,3 +56,12 @@ app.include_router(events.router)
 
 app.include_router(uploads.router, prefix="/api/v1")
 app.include_router(uploads.router)
+
+app.include_router(registrations.router, prefix="/api/v1")
+app.include_router(registrations.router)
+
+app.include_router(teams.router, prefix="/api/v1")
+app.include_router(teams.router)
+
+app.include_router(organizer.router, prefix="/api/v1")
+app.include_router(organizer.router)

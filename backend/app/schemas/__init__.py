@@ -22,6 +22,25 @@ from app.schemas.event import (
     TravelEstimatesResponse,
     UpdateEventRequest,
 )
+from app.schemas.registration import (
+    CheckInRequest,
+    CheckInResponse,
+    EventSummary,
+    OrganizerRegistrationItem,
+    OrganizerRegistrationListResponse,
+    RegisterSoloRequest,
+    RegistrationListResponse,
+    RegistrationResponse,
+    TeamSummary,
+)
+from app.schemas.team import (
+    CreateTeamRequest,
+    InviteSummaryResponse,
+    JoinTeamRequest,
+    TeamMemberResponse,
+    TeamMemberStartPointRequest,
+    TeamResponse,
+)
 from app.schemas.user import (
     DeviceTokenRequest,
     UpdateMeRequest,
@@ -53,4 +72,19 @@ __all__ = [
     "TravelEstimatesRequest",
     "TravelEstimatesResponse",
     "EventTravelEstimate",
+    "RegisterSoloRequest",
+    "RegistrationResponse",
+    "RegistrationListResponse",
+    "EventSummary",
+    "TeamSummary",
+    "CheckInRequest",
+    "CheckInResponse",
+    "OrganizerRegistrationItem",
+    "OrganizerRegistrationListResponse",
+    "CreateTeamRequest",
+    "JoinTeamRequest",
+    "TeamMemberResponse",
+    "TeamResponse",
+    "InviteSummaryResponse",
+    "TeamMemberStartPointRequest",
 ]

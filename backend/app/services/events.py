@@ -4,7 +4,7 @@ import uuid
 from datetime import datetime, timezone
 from typing import Any
 
-from sqlalchemy import func, or_, select
+from sqlalchemy import func, or_, select, update
 from sqlalchemy.orm import Session
 
 from app.core.errors import AppError
@@ -14,11 +14,13 @@ from app.models.enums import (
     OrganizerStatus,
     ParticipationType,
     RegistrationStatus,
+    TeamStatus,
     UserRole,
 )
 from app.models.event import Event
 from app.models.organizer_profile import OrganizerProfile
 from app.models.registration import Registration
+from app.models.team import Team
 from app.models.user import User
 from app.schemas.event import (
     CreateEventRequest,
@@ -294,6 +296,25 @@ def cancel_event(db: Session, event_id: uuid.UUID, current_user: User) -> Event:
     check_event_ownership(event, current_user)
 
     event.status = EventStatus.CANCELLED
+
+    # Cascade cancellation to active registrations and teams
+    db.execute(
+        update(Registration)
+        .where(
+            Registration.event_id == event.id,
+            Registration.status != RegistrationStatus.CANCELLED,
+        )
+        .values(status=RegistrationStatus.CANCELLED)
+    )
+    db.execute(
+        update(Team)
+        .where(
+            Team.event_id == event.id,
+            Team.status != TeamStatus.CANCELLED,
+        )
+        .values(status=TeamStatus.CANCELLED)
+    )
+
     db.commit()
     db.refresh(event)
 
