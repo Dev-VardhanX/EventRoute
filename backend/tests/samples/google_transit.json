@@ -1,0 +1,127 @@
+{
+  "routes": [
+    {
+      "description": "Via Yellow Line and Magenta Line",
+      "distanceMeters": 18200,
+      "duration": "2820s",
+      "polyline": {
+        "encodedPolyline": "gfo}D~nbvM?_ibE~nbvM"
+      },
+      "travelAdvisory": {
+        "transitFare": {
+          "currencyCode": "INR",
+          "units": "40"
+        }
+      },
+      "legs": [
+        {
+          "distanceMeters": 18200,
+          "duration": "2820s",
+          "polyline": {
+            "encodedPolyline": "gfo}D~nbvM?_ibE~nbvM"
+          },
+          "steps": [
+            {
+              "distanceMeters": 350,
+              "staticDuration": "270s",
+              "travelMode": "WALK",
+              "polyline": {
+                "encodedPolyline": "walk_poly_1"
+              },
+              "navigationInstruction": {
+                "instructions": "Walk to Rajiv Chowk Metro Station"
+              }
+            },
+            {
+              "distanceMeters": 12500,
+              "staticDuration": "1500s",
+              "travelMode": "TRANSIT",
+              "polyline": {
+                "encodedPolyline": "metro_poly_1"
+              },
+              "navigationInstruction": {
+                "instructions": "Take Yellow Line towards HUDA City Centre"
+              },
+              "transitDetails": {
+                "stopDetails": {
+                  "departureStop": {
+                    "name": "Rajiv Chowk"
+                  },
+                  "arrivalStop": {
+                    "name": "Hauz Khas"
+                  },
+                  "departureTime": "2026-10-22T10:05:00Z",
+                  "arrivalTime": "2026-10-22T10:30:00Z"
+                },
+                "transitLine": {
+                  "name": "Delhi Metro Yellow Line",
+                  "nameShort": "Yellow",
+                  "color": "#FFD700",
+                  "vehicle": {
+                    "type": "SUBWAY"
+                  },
+                  "agencies": [
+                    {
+                      "name": "DMRC"
+                    }
+                  ]
+                },
+                "headsign": "HUDA City Centre",
+                "stopCount": 9
+              }
+            },
+            {
+              "distanceMeters": 4800,
+              "staticDuration": "720s",
+              "travelMode": "TRANSIT",
+              "polyline": {
+                "encodedPolyline": "metro_poly_2"
+              },
+              "navigationInstruction": {
+                "instructions": "Take Magenta Line towards Botanical Garden"
+              },
+              "transitDetails": {
+                "stopDetails": {
+                  "departureStop": {
+                    "name": "Hauz Khas"
+                  },
+                  "arrivalStop": {
+                    "name": "IIT Delhi"
+                  },
+                  "departureTime": "2026-10-22T10:35:00Z",
+                  "arrivalTime": "2026-10-22T10:47:00Z"
+                },
+                "transitLine": {
+                  "name": "Delhi Metro Magenta Line",
+                  "nameShort": "Magenta",
+                  "color": "#FF00FF",
+                  "vehicle": {
+                    "type": "SUBWAY"
+                  },
+                  "agencies": [
+                    {
+                      "name": "DMRC"
+                    }
+                  ]
+                },
+                "headsign": "Botanical Garden",
+                "stopCount": 2
+              }
+            },
+            {
+              "distanceMeters": 550,
+              "staticDuration": "330s",
+              "travelMode": "WALK",
+              "polyline": {
+                "encodedPolyline": "walk_poly_2"
+              },
+              "navigationInstruction": {
+                "instructions": "Walk to Dogra Hall, IIT Delhi"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

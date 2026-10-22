@@ -11,6 +11,7 @@ from app.api import (
     me,
     organizer,
     registrations,
+    route,
     teams,
     uploads,
 )
@@ -65,3 +66,7 @@ app.include_router(teams.router)
 
 app.include_router(organizer.router, prefix="/api/v1")
 app.include_router(organizer.router)
+
+app.include_router(route.router, prefix="/api/v1")
+app.include_router(route.router)
+

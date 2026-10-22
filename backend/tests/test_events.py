@@ -296,7 +296,8 @@ def test_travel_estimates_endpoint(client, approved_org_headers):
     assert est["event_id"] == event_id
     assert est["distance_km"] > 5.0
     assert est["duration_min"] > 0
-    assert est["source"] == "estimate"
+    assert est["source"] in ("route", "estimate")
+
 
 
 def test_image_uploads(client, student_headers, approved_org_headers):

@@ -491,31 +491,31 @@ def list_events_query(
 def estimate_travel_estimates(
     db: Session, req: TravelEstimatesRequest
 ) -> list[EventTravelEstimate]:
-    """Calculate rough straight-line travel estimates (25 km/h) for specified events."""
+    """Calculate travel estimates using 6h cached routing with straight-line fallback."""
+    if len(req.event_ids) > 20:
+        raise AppError(
+            "VALIDATION_ERROR",
+            "Maximum 20 event IDs allowed per travel estimate request",
+        )
+
     origin_lat = req.origin.lat if req.origin else req.lat
     origin_lng = req.origin.lng if req.origin else req.lng
 
     if origin_lat is None or origin_lng is None:
         raise AppError("VALIDATION_ERROR", "Origin coordinates (lat, lng) are required")
 
+    from app.services.routing.cache import get_cached_route, set_cached_route
+    from app.services.routing.service import get_route
+
     events = db.execute(select(Event).where(Event.id.in_(req.event_ids))).scalars().all()
     events_map = {ev.id: ev for ev in events}
 
     estimates: list[EventTravelEstimate] = []
+    DISCOVERY_TTL_S = 6 * 60 * 60  # 6 hours
+
     for eid in req.event_ids:
         ev = events_map.get(eid)
-        if ev and ev.venue_lat is not None and ev.venue_lng is not None:
-            dist = haversine_distance(origin_lat, origin_lng, ev.venue_lat, ev.venue_lng)
-            duration_min = max(1, round((dist / 25.0) * 60))
-            estimates.append(
-                EventTravelEstimate(
-                    event_id=eid,
-                    distance_km=round(dist, 2),
-                    duration_min=duration_min,
-                    source="estimate",
-                )
-            )
-        else:
+        if not ev or ev.venue_lat is None or ev.venue_lng is None:
             estimates.append(
                 EventTravelEstimate(
                     event_id=eid,
@@ -524,5 +524,66 @@ def estimate_travel_estimates(
                     source="estimate",
                 )
             )
+            continue
+
+        dist_km = haversine_distance(origin_lat, origin_lng, ev.venue_lat, ev.venue_lng)
+        # Default walk under 1.5 km, otherwise transit
+        mode = "walk" if dist_km < 1.5 else "transit"
+        cache_key = (
+            f"discovery:{mode}:{origin_lat:.4f},{origin_lng:.4f}:"
+            f"{ev.venue_lat:.4f},{ev.venue_lng:.4f}:none"
+        )
+
+        # 1. Check discovery cache
+        cached_routes = get_cached_route(db, cache_key)
+        if cached_routes and len(cached_routes) > 0:
+            c_route = cached_routes[0]
+            estimates.append(
+                EventTravelEstimate(
+                    event_id=eid,
+                    distance_km=round(c_route.distance_m / 1000.0, 2),
+                    duration_min=max(1, round(c_route.duration_s / 60)),
+                    source="route",
+                )
+            )
+            continue
+
+        # 2. Try real route computation
+        try:
+            routes, _, _ = get_route(
+                db=db,
+                origin=(origin_lat, origin_lng),
+                destination=(ev.venue_lat, ev.venue_lng),
+                mode=mode,
+            )
+            if routes and len(routes) > 0:
+                best_route = routes[0]
+                set_cached_route(db, cache_key, routes, DISCOVERY_TTL_S)
+                estimates.append(
+                    EventTravelEstimate(
+                        event_id=eid,
+                        distance_km=round(best_route.distance_m / 1000.0, 2),
+                        duration_min=max(1, round(best_route.duration_s / 60)),
+                        source="route",
+                    )
+                )
+                continue
+        except Exception as exc:
+            logger.debug(
+                "Real route estimate failed for event %s, falling back to estimate: %s",
+                eid,
+                exc,
+            )
+
+        # 3. Fallback to straight-line estimate
+        duration_min = max(1, round((dist_km / 25.0) * 60))
+        estimates.append(
+            EventTravelEstimate(
+                event_id=eid,
+                distance_km=round(dist_km, 2),
+                duration_min=duration_min,
+                source="estimate",
+            )
+        )
 
     return estimates

@@ -1,0 +1,40 @@
+{
+  "routes": [
+    {
+      "summary": {
+        "distance": 14250.0,
+        "duration": 1560.0
+      },
+      "geometry": "ors_encoded_polyline_geometry",
+      "segments": [
+        {
+          "distance": 14250.0,
+          "duration": 1560.0,
+          "steps": [
+            {
+              "distance": 250.0,
+              "duration": 30.0,
+              "type": 1,
+              "instruction": "Turn right onto Outer Ring Road",
+              "name": "Outer Ring Road"
+            },
+            {
+              "distance": 13500.0,
+              "duration": 1450.0,
+              "type": 0,
+              "instruction": "Continue onto Mahatma Gandhi Marg",
+              "name": "Mahatma Gandhi Marg"
+            },
+            {
+              "distance": 500.0,
+              "duration": 80.0,
+              "type": 2,
+              "instruction": "Turn left onto IIT Flyover approach",
+              "name": "IIT Flyover"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
