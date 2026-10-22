@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EventRoute helps students discover college events, coordinate teams, and plan when to leave.">
+  <title>EventRoute — Discover. Team Up. Get There.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="announcement"><span class="pulse"></span> Made for campus life · Discover events across Delhi-NCR</div>
+  <header class="site-header container">
+    <a class="brand" href="#home" aria-label="EventRoute home"><span class="brand-mark">↗</span> EventRoute</a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="discover-map.html">Discover</a><a href="#how">How it works</a><a href="#organizers">Organizers</a>
+    </nav>
+    <div class="header-actions"><a class="btn btn-quiet" href="login.html">Login</a><a class="btn btn-primary" href="login.html?mode=signup">Sign Up <span>↗</span></a><button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button></div>
+  </header>
+
+  <main id="home">
+    <section class="hero container">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> NEXT GEN EVENT DISCOVERY</div>
+        <h1>Others tell you<br>what to attend.<br><span>EventRoute gets<br>you there.</span></h1>
+        <p class="hero-description">The only platform that helps college students discover inter-college events, coordinate with teams, and get smart “leave by” times based on their starting point.</p>
+        <div class="hero-actions"><a class="btn btn-primary btn-large" href="discover-map.html">Discover Events <span>↗</span></a><button class="btn btn-soft btn-large" data-toast="Team creation is a demo feature for now.">＋ Create Team</button></div>
+        <div class="social-proof"><div class="avatar-stack"><span>R</span><span>A</span><span>P</span><span>+</span></div><div><strong>Joined by 10k+ students</strong><small>from colleges across Delhi-NCR</small></div></div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-glow"></div>
+        <div class="route-doodle" aria-hidden="true"><svg viewBox="0 0 440 430" fill="none"><path d="M54 315 C 20 230, 126 215, 145 155 S 235 90, 260 145 S 345 245, 387 92" stroke="#8A80E8" stroke-width="4" stroke-linecap="round" stroke-dasharray="7 11"/><circle cx="54" cy="315" r="10" fill="#FF8C9C"/><circle cx="387" cy="92" r="10" fill="#7B70E5"/></svg></div>
+        <div class="floating-card leave-card"><span class="mini-icon coral">◷</span><div><small>LEAVE BY</small><strong>10:15 <em>AM</em></strong><span class="status"><i></i> Good time to go</span></div></div>
+        <div class="hero-art">
+          <div class="art-sun"></div><div class="art-cloud cloud-one"></div><div class="art-cloud cloud-two"></div>
+          <div class="campus-building"><div class="roof"></div><div class="building-front"><div class="building-label">CAMPUS</div><div class="windows"></div><div class="building-door"></div></div><div class="building-side"></div></div>
+          <div class="art-path"></div><div class="art-person"><div class="person-head"></div><div class="person-body"></div><div class="person-leg leg-one"></div><div class="person-leg leg-two"></div><div class="person-bag"></div></div>
+          <div class="pin pin-one">✦</div><div class="pin pin-two">⌖</div>
+        </div>
+        <div class="floating-card venue-card"><span class="mini-icon lavender">⌖</span><div><small>FEATURED VENUE</small><strong>IIT Delhi</strong><span>Robotics Cup · 38 min away</span></div><span class="arrow-circle">↗</span></div>
+        <div class="tiny-note">YOUR NEXT BIG THING <span>✳</span></div>
+      </div>
+    </section>
+
+    <section class="how-section section-pad" id="how">
+      <div class="container">
+        <div class="section-heading"><div><div class="eyebrow">LESS PLANNING, MORE DOING</div><h2>How EventRoute works<span class="heading-period">.</span></h2></div><p>Three simple steps to bridge the gap<br class="desktop-only"> between discovery and arrival.</p></div>
+        <div class="steps-grid">
+          <article class="step-card"><div class="step-top"><span class="step-number">01</span><span class="step-icon lavender">⌕</span></div><h3>Find Events</h3><p>Discover hackathons, culturals, and sports events across Delhi-NCR colleges on an interactive map.</p><div class="card-decoration decor-search">⌕</div></article>
+          <article class="step-card featured-step"><div class="step-top"><span class="step-number">02</span><span class="step-icon peach">♧</span></div><h3>Team Up</h3><p>Create or join teams with a simple link. Manage members and coordinate your journey together.</p><div class="mini-avatars"><span>R</span><span>A</span><span>P</span><b>+2</b></div></article>
+          <article class="step-card"><div class="step-top"><span class="step-number">03</span><span class="step-icon mint">➤</span></div><h3>Get There</h3><p>Get your route and a dynamic “leave by” time based on traffic from your starting point.</p><div class="card-decoration decor-route">↗ ┄ ┄ ◉</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="events-section section-pad" id="discover">
+      <div class="container">
+        <div class="section-heading"><div><div class="eyebrow">YOUR WEEKEND, SORTED</div><h2>Happening this weekend<span class="heading-period">.</span></h2><p class="heading-sub">Good people. Great ideas. Your next story starts here.</p></div><a href="discover-map.html" class="text-link">View all events <span>↗</span></a></div>
+        <div class="filter-row"><div class="filter-pills" id="filters"><button class="filter-pill active" data-filter="All">All events <span>06</span></button><button class="filter-pill" data-filter="Hackathon">Hackathons</button><button class="filter-pill" data-filter="Cultural">Culturals</button><button class="filter-pill" data-filter="Workshop">Workshops</button></div><label class="search-box"><span>⌕</span><input id="eventSearch" type="search" placeholder="Search events or colleges..." aria-label="Search events"></label></div>
+        <div class="event-grid" id="eventGrid"></div>
+        <p class="demo-disclaimer">Demo content for preview only · Event names, dates, fees and travel times are fictional.</p>
+      </div>
+    </section>
+
+    <section class="team-banner container" id="organizers">
+      <div class="team-illustration"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="team-spark">✦</div><div class="team-people"><span class="person p1">R</span><span class="person p2">A</span><span class="person p3">P</span></div><div class="team-ticket">TEAM<br><strong>MODE</strong></div></div>
+      <div class="team-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> THE GAME CHANGER</div><h2>Better together.<br><span>There together.</span></h2><p>Don't leave anyone behind. Coordinate travel with your team, get group alerts if someone is running late, and find the best meeting point at the venue.</p><ul><li><span>✓</span> Real-time member tracking</li><li><span>✓</span> Group “leave by” alerts</li><li><span>✓</span> Shared arrival ETA</li></ul><button class="btn btn-dark" data-toast="Team Travel Mode is a demo feature for now.">Explore Team Travel <span>↗</span></button></div>
+    </section>
+
+    <section class="app-section section-pad">
+      <div class="container app-panel"><div class="app-copy"><div class="eyebrow">YOUR POCKET-SIZED CO-PILOT</div><h2>Your event is out there.<br><span>Let's get you there.</span></h2><p>Live navigation and team alerts work best in the EventRoute Android app. This starter website uses demo data and does not provide live navigation.</p><div class="store-button"><span class="play-icon">▶</span><div><small>COMING SOON TO</small><strong>Google Play</strong></div><span class="store-arrow">↗</span></div></div><div class="phone-mock"><div class="phone-top"><span>9:41</span><span>● ● ▰</span></div><div class="phone-map"><div class="map-road road-a"></div><div class="map-road road-b"></div><div class="map-road road-c"></div><div class="phone-pin">⌖</div><div class="phone-route"></div></div><div class="phone-sheet"><span class="sheet-handle"></span><small>YOUR NEXT EVENT</small><h3>Robotics Cup</h3><div class="phone-info"><span>◷ 38 min away</span><span>↗ Leave by 10:15</span></div><div class="phone-cta">View route ↗</div></div></div><div class="app-sticker">✳ <span>GO<br>EXPLORE</span></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark">↗</span> EventRoute</a><p>Your ultimate event companion.<br>Find your people. Find your next thing.</p><div class="footer-socials"><a href="#home" aria-label="Instagram">ig</a><a href="#home" aria-label="LinkedIn">in</a><a href="#home" aria-label="X">𝕏</a></div></div><div class="footer-col"><h4>Explore</h4><a href="#discover">Discover events</a><a href="#discover">Popular colleges</a><a href="#discover">Upcoming fests</a></div><div class="footer-col"><h4>For organizers</h4><a href="#organizers">Post an event</a><a href="#organizers">Organizer portal</a><a href="#organizers">Success stories</a></div><div class="footer-col"><h4>Support</h4><a href="#home">Help center</a><a href="#home">Privacy policy</a><a href="#home">Contact us</a></div></div><div class="container footer-bottom"><span>© 2026 EventRoute · Starter demo</span><span>Made for campus life <b>♥</b></span></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>

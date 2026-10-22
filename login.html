@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | EventRoute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <main class="login-shell">
+    <section class="welcome-side">
+      <a class="brand" href="index.html"><span class="brand-mark">↗</span> EventRoute</a>
+      <h1>Your gateway to the best<br>college events.</h1>
+      <div class="art-card"><img src="assets/reference/pdf-image-13.jpeg" alt="EventRoute student mascot holding a key and phone"></div>
+      <div class="student-badge"><span>✦</span><strong>10,000+ Students</strong></div>
+    </section>
+    <section class="form-side">
+      <div class="auth-card">
+        <div class="tabs" role="tablist" aria-label="Account type"><button class="tab active" id="loginTab" type="button">Login</button><button class="tab" id="signupTab" type="button">Sign Up</button></div>
+        <div class="card-content">
+          <h2 id="formTitle">Welcome Back!</h2><p class="subtitle" id="formSubtitle">Login to your account to continue.</p>
+          <form id="authForm">
+            <label for="email">Email Address</label><input id="email" type="email" placeholder="student@college.edu" autocomplete="email" required>
+            <label for="password">Password</label><input id="password" type="password" placeholder="••••••••" autocomplete="current-password" minlength="6" required>
+            <div class="forgot-row" id="forgotRow"><a href="#" id="forgotLink">Forgot Password?</a></div>
+            <button class="submit-btn" id="submitBtn" type="submit">Login</button>
+          </form>
+          <div class="divider"><span>OR CONTINUE WITH</span></div>
+          <div class="social-buttons"><button type="button" class="social-btn" id="googleBtn"><span class="google-g">G</span> Google</button><button type="button" class="social-btn" id="appleBtn"><span class="apple">●</span> Apple</button></div>
+          <p class="form-message" id="formMessage" aria-live="polite"></p>
+          <p class="back-home"><a href="index.html">← Back to home</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/login.js"></script>
+</body></html>
