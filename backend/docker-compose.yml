@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: eventroute
+      POSTGRES_PASSWORD: eventroute
+      POSTGRES_DB: eventroute
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U eventroute"]
+      interval: 3s
+      retries: 10
+  api:
+    build: .
+    env_file: .env
+    ports: ["8000:8000"]
+    volumes: [".:/code"]
+    depends_on:
+      db: { condition: service_healthy }
+volumes:
+  pgdata:

@@ -1,18 +1,18 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.api import health
+from app.core.config import get_settings
+from app.core.errors import register_error_handlers
 
-app = FastAPI(title="EventRoute API", version="0.1.0")
+settings = get_settings()
+app = FastAPI(title="EventRoute API", version="0.1.0", docs_url="/docs")
 
 app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # replace with ALLOWED_ORIGINS from settings
-    allow_methods=["*"],
-    allow_headers=["*"],
+    CORSMiddleware, allow_origins=settings.cors_origins,
+    allow_credentials=True, allow_methods=["*"], allow_headers=["*"],
 )
+register_error_handlers(app)
 
-
-@app.get("/health")
-def health():
-    return {"status": "ok"}
-
-# TODO (backend lead): include routers from app/api under prefix /api/v1
+app.include_router(health.router)               # /health (uptime pinger)
+app.include_router(health.router, prefix="/api/v1")
+# later steps: app.include_router(auth.router, prefix="/api/v1") ...
