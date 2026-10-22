@@ -26,7 +26,6 @@ android/app/build/
 node_modules/
 
 # ml
-ml/report/*.png
 ml/report/RESULTS.md
 ml/data/*.csv
 !ml/data/od_pairs.csv

@@ -28,6 +28,20 @@ PITCH_NUMBERS = REPORT_DIR / "PITCH_NUMBERS.json"
 
 @pytest.fixture(scope="module")
 def pitch_context():
+    # Ensure charts exist; generate via existing make_report script if absent
+    coverage_png = REPORT_DIR / "coverage_by_distance.png"
+    buffer_png = REPORT_DIR / "buffer_by_distance.png"
+    if not coverage_png.exists() or not buffer_png.exists():
+        try:
+            from scripts.make_report import generate_report
+        except ImportError:
+            import sys
+            scripts_dir = ML_ROOT / "scripts"
+            if str(scripts_dir) not in sys.path:
+                sys.path.insert(0, str(scripts_dir))
+            from make_report import generate_report
+        generate_report(ML_ROOT / "models" / "buffer_v1.metadata.json", REPORT_DIR)
+
     assert PITCH_MD.exists(), f"PITCH.md missing at {PITCH_MD}"
     assert PITCH_NUMBERS.exists(), f"PITCH_NUMBERS.json missing at {PITCH_NUMBERS}"
 

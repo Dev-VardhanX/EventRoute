@@ -41,6 +41,11 @@ jobs:
           cd ml
           ruff check .
 
+      - name: Generate report charts
+        run: |
+          cd ml
+          python scripts/make_report.py
+
       - name: Run test suite
         run: |
           cd ml
