@@ -1,3 +1,4 @@
+from app.schemas.admin import OrganizerListResponse, OrganizerProfileResponse
 from app.schemas.auth import (
     LoginRequest,
     RefreshTokenRequest,
@@ -6,7 +7,21 @@ from app.schemas.auth import (
     TokenResponse,
     VerifyEmailRequest,
 )
-from app.schemas.college import CollegeListResponse, CollegeResponse
+from app.schemas.college import (
+    CollegeListResponse,
+    CollegeResponse,
+    CreateCollegeRequest,
+    UpdateCollegeRequest,
+)
+from app.schemas.event import (
+    CreateEventRequest,
+    EventListResponse,
+    EventResponse,
+    EventTravelEstimate,
+    TravelEstimatesRequest,
+    TravelEstimatesResponse,
+    UpdateEventRequest,
+)
 from app.schemas.user import (
     DeviceTokenRequest,
     UpdateMeRequest,
@@ -27,4 +42,15 @@ __all__ = [
     "DeviceTokenRequest",
     "CollegeResponse",
     "CollegeListResponse",
+    "CreateCollegeRequest",
+    "UpdateCollegeRequest",
+    "OrganizerProfileResponse",
+    "OrganizerListResponse",
+    "CreateEventRequest",
+    "UpdateEventRequest",
+    "EventResponse",
+    "EventListResponse",
+    "TravelEstimatesRequest",
+    "TravelEstimatesResponse",
+    "EventTravelEstimate",
 ]
