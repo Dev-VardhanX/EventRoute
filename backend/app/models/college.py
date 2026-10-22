@@ -13,3 +13,4 @@ class College(Base, IdTimestampMixin):
     lng: Mapped[float] = mapped_column(Float, nullable=False)
     email_domain: Mapped[str | None] = mapped_column(String(100), nullable=True)
     verified: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    is_demo: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
