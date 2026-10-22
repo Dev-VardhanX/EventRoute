@@ -1,0 +1,47 @@
+[
+  {
+    "id": "c1",
+    "name": "IIT Delhi",
+    "city": "Hauz Khas, New Delhi",
+    "lat": 28.5459,
+    "lng": 77.1926,
+    "email_domain": "iitd.ac.in",
+    "verified": true
+  },
+  {
+    "id": "c2",
+    "name": "DTU (Delhi Technological University)",
+    "city": "Rohini, Delhi",
+    "lat": 28.7501,
+    "lng": 77.1177,
+    "email_domain": "dtu.ac.in",
+    "verified": true
+  },
+  {
+    "id": "c3",
+    "name": "NSUT (Netaji Subhas University of Technology)",
+    "city": "Dwarka, New Delhi",
+    "lat": 28.6094,
+    "lng": 77.0368,
+    "email_domain": "nsut.ac.in",
+    "verified": true
+  },
+  {
+    "id": "c4",
+    "name": "IIIT Delhi",
+    "city": "Okhla, New Delhi",
+    "lat": 28.5457,
+    "lng": 77.2732,
+    "email_domain": "iiitd.ac.in",
+    "verified": true
+  },
+  {
+    "id": "c5",
+    "name": "IGDTUW (Indira Gandhi Delhi Technical University for Women)",
+    "city": "Kashmere Gate, Delhi",
+    "lat": 28.6652,
+    "lng": 77.2324,
+    "email_domain": "igdtuw.ac.in",
+    "verified": true
+  }
+]

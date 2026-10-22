@@ -1,0 +1,158 @@
+{
+  "version": "buffer-v1",
+  "quantile": 0.9,
+  "clamp_minutes": [
+    0.0,
+    20.0
+  ],
+  "trained_at_utc": "2026-10-22T10:17:25+00:00",
+  "python": "3.12.10",
+  "sklearn": "1.5.2",
+  "rows": 30000,
+  "routes": 2500,
+  "rows_by_source": {
+    "synthetic": 30000
+  },
+  "contains_synthetic_data": true,
+  "metrics_note": "Metrics come from a route-grouped 80/20 holdout; the shipped model is refit on all rows.",
+  "report": {
+    "holdout": {
+      "model_unclipped": {
+        "n": 6000,
+        "coverage": 0.897,
+        "late_rate": 0.103,
+        "pinball_q": 0.7215,
+        "mae_to_observed_min": 4.4395,
+        "mean_buffer_min": 8.3214
+      },
+      "model_clipped_0_20": {
+        "n": 6000,
+        "coverage": 0.883,
+        "late_rate": 0.117,
+        "pinball_q": 0.813,
+        "mae_to_observed_min": 4.0831,
+        "mean_buffer_min": 7.6472
+      },
+      "rule_table_baseline": {
+        "n": 6000,
+        "coverage": 0.7502,
+        "late_rate": 0.2498,
+        "pinball_q": 1.2863,
+        "mae_to_observed_min": 3.201,
+        "mean_buffer_min": 5.3613
+      },
+      "rule_table_scaled_to_same_coverage": {
+        "scale": 1.6,
+        "coverage": 0.9008,
+        "mean_buffer_min": 8.3041,
+        "reached_target": true
+      },
+      "pinball_q": {
+        "model_clipped": 0.813000869375051,
+        "rule_scaled": 0.981046668570848
+      }
+    },
+    "by_mode_model_clipped": {
+      "bike": {
+        "n": 324,
+        "coverage": 0.9167,
+        "late_rate": 0.0833,
+        "pinball_q": 0.1081,
+        "mae_to_observed_min": 0.8296,
+        "mean_buffer_min": 1.7209
+      },
+      "bus": {
+        "n": 1248,
+        "coverage": 0.8381,
+        "late_rate": 0.1619,
+        "pinball_q": 1.5658,
+        "mae_to_observed_min": 6.7092,
+        "mean_buffer_min": 13.4688
+      },
+      "drive": {
+        "n": 1440,
+        "coverage": 0.8715,
+        "late_rate": 0.1285,
+        "pinball_q": 1.2598,
+        "mae_to_observed_min": 5.15,
+        "mean_buffer_min": 9.3838
+      },
+      "metro": {
+        "n": 1584,
+        "coverage": 0.8996,
+        "late_rate": 0.1004,
+        "pinball_q": 0.4269,
+        "mae_to_observed_min": 3.3828,
+        "mean_buffer_min": 5.8726
+      },
+      "train": {
+        "n": 468,
+        "coverage": 0.938,
+        "late_rate": 0.062,
+        "pinball_q": 0.53,
+        "mae_to_observed_min": 4.3661,
+        "mean_buffer_min": 8.5663
+      },
+      "tram": {
+        "n": 204,
+        "coverage": 0.9167,
+        "late_rate": 0.0833,
+        "pinball_q": 0.4721,
+        "mae_to_observed_min": 3.2961,
+        "mean_buffer_min": 5.3683
+      },
+      "walk": {
+        "n": 732,
+        "coverage": 0.8866,
+        "late_rate": 0.1134,
+        "pinball_q": 0.074,
+        "mae_to_observed_min": 0.5009,
+        "mean_buffer_min": 0.8163
+      }
+    },
+    "by_source_model_clipped": {
+      "synthetic": {
+        "n": 6000,
+        "coverage": 0.883,
+        "late_rate": 0.117,
+        "pinball_q": 0.813,
+        "mae_to_observed_min": 4.0831,
+        "mean_buffer_min": 7.6472
+      }
+    },
+    "calibration_by_distance": {
+      "0-3km": {
+        "n": 1068,
+        "model_coverage": 0.8951,
+        "rule_scaled_coverage": 0.9981,
+        "model_mean_buffer": 1.383,
+        "rule_scaled_mean_buffer": 4.38
+      },
+      "3-8km": {
+        "n": 948,
+        "model_coverage": 0.8966,
+        "rule_scaled_coverage": 0.9842,
+        "model_mean_buffer": 4.848,
+        "rule_scaled_mean_buffer": 8.59
+      },
+      "8-15km": {
+        "n": 1080,
+        "model_coverage": 0.8796,
+        "rule_scaled_coverage": 0.913,
+        "model_mean_buffer": 8.407,
+        "rule_scaled_mean_buffer": 9.353
+      },
+      "15km+": {
+        "n": 2904,
+        "model_coverage": 0.8753,
+        "rule_scaled_coverage": 0.8333,
+        "model_mean_buffer": 10.582,
+        "rule_scaled_mean_buffer": 9.264
+      }
+    },
+    "group_5fold_coverage_clipped": {
+      "mean": 0.8859,
+      "std": 0.0015
+    }
+  }
+}

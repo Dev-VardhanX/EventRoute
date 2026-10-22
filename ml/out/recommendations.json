@@ -1,0 +1,72 @@
+{
+  "user_id": "u-john",
+  "generated_at": "2026-10-23T10:00:00Z",
+  "items": [
+    {
+      "event_id": "11111111-1111-1111-1111-111111111111",
+      "score": 0.801,
+      "reason": "Matches your #Hackathons interest \u00b7 Registration closes within a day",
+      "components": {
+        "interest": 1.0,
+        "proximity": 0.5,
+        "popularity": 0.63,
+        "urgency": 1.0
+      }
+    },
+    {
+      "event_id": "22222222-2222-2222-2222-222222222222",
+      "score": 0.5964,
+      "reason": "Matches your #Robotics interest \u00b7 32 students going",
+      "components": {
+        "interest": 0.7,
+        "proximity": 0.3889,
+        "popularity": 0.64,
+        "urgency": 0.6076
+      }
+    },
+    {
+      "event_id": "66666666-6666-6666-6666-666666666666",
+      "score": 0.5178,
+      "reason": "Matches your #Hackathons interest \u00b7 38 students going",
+      "components": {
+        "interest": 0.7,
+        "proximity": 0.4444,
+        "popularity": 0.6333,
+        "urgency": 0.0
+      }
+    },
+    {
+      "event_id": "55555555-5555-5555-5555-555555555555",
+      "score": 0.3783,
+      "reason": "42 min away \u00b7 75 students going",
+      "components": {
+        "interest": 0.3,
+        "proximity": 0.5333,
+        "popularity": 0.625,
+        "urgency": 0.0
+      }
+    },
+    {
+      "event_id": "33333333-3333-3333-3333-333333333333",
+      "score": 0.3483,
+      "reason": "15 min away \u00b7 28 students going",
+      "components": {
+        "interest": 0.0,
+        "proximity": 0.8333,
+        "popularity": 0.7,
+        "urgency": 0.0
+      }
+    },
+    {
+      "event_id": "44444444-4444-4444-4444-444444444444",
+      "score": 0.3067,
+      "reason": "Filling fast",
+      "components": {
+        "interest": 0.0,
+        "proximity": 0.4667,
+        "popularity": 0.95,
+        "urgency": 0.0
+      }
+    }
+  ]
+}

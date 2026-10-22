@@ -1,0 +1,127 @@
+{
+  "plan_id": "plan-0001",
+  "event_id": "11111111-1111-1111-1111-111111111111",
+  "origin": { "label": "NSUT Campus, Dwarka", "lat": 28.6094, "lng": 77.0368 },
+  "destination": { "label": "IIT Delhi, Hauz Khas", "lat": 28.5459, "lng": 77.1926 },
+  "check_in_at": "2026-10-24T04:15:00Z",
+  "leave_by": "2026-10-24T02:45:00Z",
+  "arrive_at": "2026-10-24T03:30:00Z",
+  "buffer_minutes": 45,
+  "buffer_breakdown": [
+    { "label": "Base buffer", "minutes": 20 },
+    { "label": "Hackathon check-in", "minutes": 10 },
+    { "label": "Delay risk", "minutes": 12 },
+    { "label": "Start slack", "minutes": 3 }
+  ],
+  "mode": "normal",
+  "selected_route_id": "route-fastest",
+  "routes": [
+    {
+      "id": "route-fastest",
+      "summary": "Metro + Walk",
+      "duration_s": 2700,
+      "distance_m": 23500,
+      "departure_time": "2026-10-24T03:00:00Z",
+      "arrival_time": "2026-10-24T03:45:00Z",
+      "fare": { "amount": 35, "currency": "INR" },
+      "transfers": 1,
+      "walking_s": 780,
+      "legs": [
+        {
+          "mode": "walk",
+          "from": { "label": "NSUT Campus", "lat": 28.6094, "lng": 77.0368 },
+          "to": { "label": "Dwarka Mor", "lat": 28.6192, "lng": 77.0331 },
+          "duration_s": 480,
+          "distance_m": 600,
+          "polyline": "wwrmD_geuMgOjMwQjCgYjC",
+          "steps": [ { "instruction": "Walk to Dwarka Mor", "distance_m": 600, "duration_s": 480 } ]
+        },
+        {
+          "mode": "metro",
+          "from": { "label": "Dwarka Mor", "lat": 28.6192, "lng": 77.0331 },
+          "to": { "label": "Rajouri Garden", "lat": 28.6492, "lng": 77.1226 },
+          "duration_s": 720,
+          "distance_m": 11000,
+          "polyline": "_utmD{oduMkMkiAkMgiB_NgiBoi@_|Bgw@_jA_l@ogA",
+          "steps": [ { "instruction": "Blue Line to Rajouri Garden", "distance_m": 11000, "duration_s": 720 } ],
+          "transit": { "line_name": "Blue Line", "short_name": "Blue", "vehicle_type": "metro", "headsign": "Noida Electronic City", "stops_count": 6, "agency": "DMRC", "color": "#2563EB" }
+        },
+        {
+          "mode": "metro",
+          "from": { "label": "Rajouri Garden", "lat": 28.6492, "lng": 77.1226 },
+          "to": { "label": "Hauz Khas", "lat": 28.5520, "lng": 77.1910 },
+          "duration_s": 1200,
+          "distance_m": 11000,
+          "polyline": "opzmDg_vuMfY_`AfpAgiBfiBw|Af{CgpA~{B_q@noBg^",
+          "steps": [ { "instruction": "Switch to Pink Line", "distance_m": 11000, "duration_s": 1200 } ],
+          "transit": { "line_name": "Pink Line", "short_name": "Pink", "vehicle_type": "metro", "headsign": "Majlis Park", "stops_count": 9, "agency": "DMRC", "color": "#EC4899" }
+        },
+        {
+          "mode": "walk",
+          "from": { "label": "Hauz Khas", "lat": 28.5520, "lng": 77.1910 },
+          "to": { "label": "IIT Delhi", "lat": 28.5459, "lng": 77.1926 },
+          "duration_s": 300,
+          "distance_m": 700,
+          "polyline": "_qgmDwjcvMvQgEjRwB",
+          "steps": [ { "instruction": "Arrive at IIT Delhi", "distance_m": 700, "duration_s": 300 } ]
+        }
+      ]
+    },
+    {
+      "id": "route-cheapest",
+      "summary": "Bus Only",
+      "duration_s": 3900,
+      "distance_m": 22000,
+      "departure_time": "2026-10-24T02:40:00Z",
+      "arrival_time": "2026-10-24T03:45:00Z",
+      "fare": { "amount": 15, "currency": "INR" },
+      "transfers": 1,
+      "walking_s": 420,
+      "legs": [
+        {
+          "mode": "bus",
+          "from": { "label": "NSUT Main Gate", "lat": 28.6094, "lng": 77.0368 },
+          "to": { "label": "Dhaula Kuan", "lat": 28.5912, "lng": 77.1610 },
+          "duration_s": 1800,
+          "distance_m": 12000,
+          "polyline": "_utmD{oduMkMkiAkMgiB_NgiBoi@_|Bgw@_jA_l@ogA",
+          "steps": [ { "instruction": "DTC 764 to Dhaula Kuan", "distance_m": 12000, "duration_s": 1800 } ],
+          "transit": { "line_name": "Route 764", "short_name": "764", "vehicle_type": "bus", "headsign": "Nehru Place", "stops_count": 14, "agency": "DTC", "color": "#16A34A" }
+        },
+        {
+          "mode": "bus",
+          "from": { "label": "Dhaula Kuan", "lat": 28.5912, "lng": 77.1610 },
+          "to": { "label": "IIT Gate", "lat": 28.5459, "lng": 77.1926 },
+          "duration_s": 2100,
+          "distance_m": 10000,
+          "polyline": "opzmDg_vuMfY_`AfpAgiBfiBw|Af{CgpA~{B_q@noBg^",
+          "steps": [ { "instruction": "DTC 511A to IIT Gate", "distance_m": 10000, "duration_s": 2100 } ],
+          "transit": { "line_name": "Route 511A", "short_name": "511A", "vehicle_type": "bus", "headsign": "Badarpur", "stops_count": 11, "agency": "DTC", "color": "#16A34A" }
+        }
+      ]
+    },
+    {
+      "id": "route-direct",
+      "summary": "Direct Bus",
+      "duration_s": 3480,
+      "distance_m": 21500,
+      "departure_time": "2026-10-24T02:50:00Z",
+      "arrival_time": "2026-10-24T03:48:00Z",
+      "fare": { "amount": 25, "currency": "INR" },
+      "transfers": 0,
+      "walking_s": 360,
+      "legs": [
+        {
+          "mode": "bus",
+          "from": { "label": "Dwarka Sector 3", "lat": 28.6094, "lng": 77.0368 },
+          "to": { "label": "IIT Delhi Main Gate", "lat": 28.5459, "lng": 77.1926 },
+          "duration_s": 3480,
+          "distance_m": 21500,
+          "polyline": "_utmD{oduMkMkiAkMgiB_NgiBoi@_|Bgw@_jA_l@ogA",
+          "steps": [ { "instruction": "Direct Express 724 to IIT Delhi", "distance_m": 21500, "duration_s": 3480 } ],
+          "transit": { "line_name": "Express 724", "short_name": "724X", "vehicle_type": "bus", "headsign": "IIT Delhi", "stops_count": 18, "agency": "DTC", "color": "#DB2777" }
+        }
+      ]
+    }
+  ]
+}
