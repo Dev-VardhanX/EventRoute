@@ -26,8 +26,9 @@ android/app/build/
 node_modules/
 
 # ml
-ml/models/*.joblib
+ml/report/RESULTS.md
 ml/data/*.csv
+!ml/data/od_pairs.csv
 
 # os
 .DS_Store

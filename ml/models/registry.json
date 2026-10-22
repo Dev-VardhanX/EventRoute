@@ -1,0 +1,11 @@
+{
+  "active_version": "buffer-v1",
+  "active_model_path": "models/buffer_v1.joblib",
+  "previous_version": null,
+  "updated_at": "2026-10-22T08:00:00+00:00",
+  "metrics": {
+    "coverage": 0.902,
+    "pinball_loss": 0.421,
+    "mean_buffer_min": 5.48
+  }
+}
